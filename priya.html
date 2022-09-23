@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>login</title>
+<link rel="stylesheet" href="pri.css">
+</head>
+<body>
+	<form action="login.php" method="post"></form>
+<div class="container">   
+    <div class="form-box">
+	<div class="button-box">
+	<div id="btn"></div>
+	<button type="button" class="toggle-btn" onclick="Login()">Login</button>
+	 <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+	</div>
+		 <div class="social-icon">
+		  <a href="facebook.jpg"><ion-icon name="facebook.jpg"></ion-icon></a>
+		 <a href="#"><ion-icon name="instagram.jpg"></ion-icon></a>
+		 <a href="#"><ion-icon name="google.jpg"></ion-icon></a>
+		 <a href="#"><ion-icon name="twitter.jpg"></ion-icon></a>
+		 </div>
+		 <form id="login" class="input-group" action="home1.html">
+				     <input type="email" class="input-field" placeholder="Enter your mail id" required >
+					  <input type="password" class="input-field" placeholder="Password" required >
+					  <input type="checkbox" class="check-box"><span>Remember password</span>
+					  <button type="Submit" class="submit-btn">Login</button>
+					  </form>
+					  <form id="register" class="input-group">
+					   <input type="name" class="input-field" placeholder="Enter your name" required >
+				     <input type="email" class="input-field" placeholder="Enter your mail id" required >
+					 <input type="mobile" class="input-field" placeholder="Enter your mobile number" required >
+					 <input type="address" class="input-field" placeholder="Enter your address" required >
+					 <input type="city" class="input-field" placeholder="Enter your city" required >
+					 <input type="state" class="input-field" placeholder="Enter your state" required >
+					 <input type="pincode" class="input-field" placeholder="Enter your pincode" required >
+					 <input type="country" class="input-field" placeholder="Enter your country" required >
+					 <input type="company_name" class="input-field" placeholder="Enter your company_name" required >
+					 <input type="occupation" class="input-field" placeholder="Enter your occupation" required >
+					 <input type="yoe" class="input-field" placeholder="Enter your year_of_experience" required >
+					  <input type="password" class="input-field" placeholder="Password" required >
+					  <input type="checkbox" class="check-box"><span>I agree to the terms and condition</span>
+					  <button type="Submit" class="submit-btn">Register</button>
+					  </form>
+					</form>
+			   </div>
+     </div>
+<script>
+  var x = document.getElementById("login");
+   var y =document.getElementById("register");  
+   var z =document.getElementById("btn");
+   function Register()
+   {
+	   
+       x.style.left="-300px";
+       y.style.left="50px";	 
+	   z.style.left="10px";
+   }
+   function Login()
+   {
+       x.style.left="50px";
+       y.style.left="450px";	 
+	   z.style.left="0";
+   }
+</script>
+</body>
+</html>
+		 

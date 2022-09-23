@@ -1,0 +1,29 @@
+<?php
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$mobile = $_POST['mobile'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+    $pincode = $_POST['pincode'];
+    $country = $_POST['country'];
+    $company_name = $_POST['company_name'];
+    $occupation = $_POST['occupation'];
+    $yoe = $_POST['yoe'];
+    $password = $_POST['password'];
+    
+	// Database connection
+	$conn = new mysqli('localhost:3307','root','','test');
+	if($conn->connect_error){
+		echo "$conn->connect_error";
+		die("Connection Failed : ". $conn->connect_error);
+	} else {
+		$stmt = $conn->prepare("insert into login(name, email, mobile, address, city, state, pincode, country, company_name, occupation, yop, password) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssssi", $name, $email, $mobile, $address, $city, $state, $pincode, $country, $company_name, $occupation, $yoe, $password);
+		$execval = $stmt->execute();
+		echo "Registration successfully...";
+		$stmt->close();
+		$conn->close();
+	}
+?>
+
